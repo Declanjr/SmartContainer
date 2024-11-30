@@ -1,0 +1,180 @@
+/* General Reset */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+  section + section {
+    margin-top: 0; 
+  }
+
+/* NAVIGATION BAR */
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #333;
+    color: #fff;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+
+  }
+  
+  .nav-links li {
+    margin: 0 1rem;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .contact-button {
+    background: #007bff;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+
+/* HERO SECTION  */
+  
+  .hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    height: 100vh; /* Full screen height */
+    color: #fff; /* White text to contrast with video */
+    overflow: hidden;
+  }
+  
+  .hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    object-fit: cover;
+    z-index: -1; /* Push video behind content */
+  }
+  
+  .hero-content {
+    position: absolute; 
+    left: 2rem; 
+    z-index: 1;
+    text-align: left; 
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add shadow for readability */
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+  }
+
+/* WHO WE ARE CSS */
+
+/* Container Styling */
+.who-we-are {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem;
+    background: #ffffff; 
+    color: #000; /* Text color */
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Left Content */
+  .left-content {
+    max-width: 50%; /* Limit width for left content */
+  }
+  
+  .left-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+  
+  .left-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: #555;
+  }
+  
+  
+  /* Right Content */
+  .right-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);   
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  .stat h3 {
+    font-size: 2.5rem;
+    color: #00b894;
+    margin-bottom: 0.5rem;
+  }
+  
+  .stat p {
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  
+  
+  .hero-image img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+/* TRANSPORT OPTION SECTION */
+  
+  .transport-options {
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  
+  .transport-options h2 {
+    margin-bottom: 1.5rem;
+  }
+  
+  .options {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .option img {
+    max-width: 100px;
+    border-radius: 10px;
+  }
+  
+  .option p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background: #222;
+    color: #fff;
+  }
+  

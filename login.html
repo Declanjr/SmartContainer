@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Container</title>
+    <link rel="icon" href="Assets/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Assets/signup.css">
+    <style>
+        body{
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="Main">
+
+        <div class="left">
+            <img src="Assets/containerHome.jpg" alt="Signup Pic">
+            <hr>
+        </div>
+
+        <div class="right">
+
+            <h2>LOGIN</h2>
+           
+            <form action="login.html" method="post" id="loginForm">
+                <label for="name">Username:</label>
+                <input type="text" id="loginUsername" name="username" required>
+
+                <label for="name">Password:</label>
+                <input type="password" id="loginPassword" name="password" required>
+
+                <div class="buttons">
+
+                    <button class="submit">Submit</button>
+
+                    <p>Don't have an account <a href="signup.html">Sign up</a></p>
+
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+<script>
+    // Handle login form submission
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // Get the input values
+        const loginUsername = document.getElementById('loginUsername').value;
+        const loginPassword = document.getElementById('loginPassword').value;
+
+        // Retrieve the stored user data
+        const storedUserData = JSON.parse(localStorage.getItem('userData'));
+
+        // Check if user data exists
+        if (!storedUserData) {
+            alert("No user found. Please sign up first.");
+            return;
+        }
+
+        // Hash the entered password
+        const hashedLoginPassword = CryptoJS.SHA256(loginPassword).toString();
+
+        // Validate credentials
+        if (
+            loginUsername === storedUserData.username &&
+            hashedLoginPassword === storedUserData.password
+        ) {
+            // Store user as logged in
+            const loggedInUser = {
+                username: storedUserData.username,
+                firstName: storedUserData.firstName
+            };
+            localStorage.setItem('loggedInUser', JSON.stringify(loggedInUser));
+
+            // Redirect user back to containers page with a notification message
+            window.location.href = "container.html"; // Change this to the correct URL for your containers page
+        } else {
+            alert("Invalid username or password. Please try again.");
+        }
+
+        // Optionally, reset the form
+        document.getElementById('loginForm').reset();
+    });
+</script>
+
+
+
+</body>
+</html>

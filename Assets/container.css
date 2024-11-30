@@ -1,0 +1,226 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #333;
+    color: #fff;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+
+  }
+  
+  .nav-links li {
+    margin: 0 1rem;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .contact-button {
+    background: #007bff;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+
+  .hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    height: 100vh; /* Full screen height */
+    color: #fff; /* White text to contrast with video */
+    overflow: hidden;
+  }
+  
+  .hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    object-fit: cover;
+    z-index: -1; /* Push video behind content */
+  }
+  
+  .hero-content {
+    position: absolute; 
+    left: 2rem; 
+    z-index: 1;
+    text-align: left; 
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add shadow for readability */
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+  }
+
+/* New Containers */
+
+h2{
+    margin-left: 15px;
+   color: #0c3d2d;
+   font-size: 24px;
+}
+.new-containers {
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .container-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    flex: 2;
+    margin-right: 40px;
+  }
+  
+  .container-item {
+    background-color: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  .container-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .container-item h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 15px 0;
+  }
+  
+  .container-item .buy-now {
+    display: inline-block;
+    background-color: #0c3d2d;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-bottom: 15px;
+  }
+  
+  .confidence-section {
+    background: linear-gradient(to bottom, #f8fdf6, #eef8ed);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 30px;
+    flex: 1;
+    height: 332px;
+  }
+  
+  .confidence-section h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .confidence-section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+  }
+  
+  .confidence-section li {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .confidence-section .specialist-link {
+    display: inline-block;
+    background-color: #0c3d2d;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+
+/*FOOTER SECTION */
+footer {
+    background-color:#0c3d2d;
+    color: #f1f5f9;
+    padding: 40px 0;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 40px;
+  }
+  
+  .footer-section h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  
+  .footer-section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-section li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-section a {
+    color: #f1f5f9;
+    text-decoration: none;
+  }
+  
+  .footer-section .btn {
+    display: inline-block;
+    background-color: #ffd700;
+    color: #1e293b;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .footer-badges {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .footer-badges img {
+    height: 30px;
+    margin-right: 10px;
+  }
+  
+  .footer-copyright {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+  }
+  
+  .footer-cards img {
+    height: 30px;
+    margin-left: 10px;
+  }
