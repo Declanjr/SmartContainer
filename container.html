@@ -16,7 +16,7 @@
         }
     </style>
 </head>
-<body>
+<div>
     
     <header class="navbar">
         <nav>
@@ -41,6 +41,8 @@
       </section>
 
       <!-- MAIN CONTENT -->
+    <div class="main-content">
+
 
       <h2>CONTAINERS ON SALE</h2>
       <div class="new-containers">
@@ -84,6 +86,7 @@
           <a href="#" class="specialist-link">Speak to a Specialist</a>
         </div>
       </div>
+    </div>
 
 <!-- FOOTER SECTION -->
 
@@ -132,35 +135,62 @@
         </div>
       </footer>
 
+      <!-- Alert component -->
+
+      <div id="alert-container" class="alert-container">
+        <div id="alert-content" class="alert-content">
+          <div class="alert-icon">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <div class="alert-message">
+            <p id="alert-message-text"></p>
+          </div>
+          <button id="alert-close-btn" class="alert-close-btn">&times;</button>
+        </div>
+      </div>
+
       <script>
         // Check authentication on page load
         document.addEventListener('DOMContentLoaded', function () {
-            const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
-    
-            // Check if user is logged in
-            if (loggedInUser) {
-                const bookingButtons = document.querySelectorAll('.buy-now');
-    
-                // Update button functionality for logged-in users
-                bookingButtons.forEach(button => {
-                    button.addEventListener('click', function (event) {
-                        event.preventDefault(); // Prevent default link behavior
-    
-                        // Show notification
-                        alert(`${loggedInUser.username}, thanks for booking a container. We will reach out soon.`);
-                    });
-                });
-            } else {
-                // Redirect "Book Now" buttons to login/signup for unauthenticated users
-                const bookingButtons = document.querySelectorAll('.buy-now');
-                bookingButtons.forEach(button => {
-                    button.addEventListener('click', function (event) {
-                        event.preventDefault(); // Prevent default link behavior
-                        window.location.href = "signup.html"; // Redirect to signup/login
-                    });
-                });
-            }
-        });
+  const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+
+  // Check if user is logged in
+  if (loggedInUser) {
+    const bookingButtons = document.querySelectorAll('.buy-now');
+
+    // Update button functionality for logged-in users
+    bookingButtons.forEach(button => {
+      button.addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent default link behavior
+
+        // Show custom alert
+        showAlert(`${loggedInUser.username}, CONTAINER BOOKED SUCCESSFULLY .`);
+      });
+    });
+  } else {
+    // Redirect "Book Now" buttons to login/signup for unauthenticated users
+    const bookingButtons = document.querySelectorAll('.buy-now');
+    bookingButtons.forEach(button => {
+      button.addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent default link behavior
+        window.location.href = "signup.html"; // Redirect to signup/login
+      });
+    });
+  }
+});
+
+function showAlert(message) {
+  const alertContainer = document.getElementById('alert-container');
+  const alertMessageText = document.getElementById('alert-message-text');
+  const alertCloseBtn = document.getElementById('alert-close-btn');
+
+  alertMessageText.textContent = message;
+  alertContainer.style.display = 'block';
+
+  alertCloseBtn.addEventListener('click', () => {
+    alertContainer.style.display = 'none';
+  });
+}
     </script>
     
 

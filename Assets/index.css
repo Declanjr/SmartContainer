@@ -45,6 +45,7 @@ body, h1, h2, p, ul, li {
   }
 
 /* HERO SECTION  */
+
   
   .hero {
     position: relative;
@@ -77,12 +78,63 @@ body, h1, h2, p, ul, li {
   .hero h1 {
     font-size: 3rem;
     margin-bottom: 0.5rem;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add shadow for readability */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); 
   }
   
   .hero p {
     font-size: 1.2rem;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+  }
+
+  /* Groups */
+  .groups {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 40px;
+  }
+  
+  .card {
+    width: 25rem;
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to bottom, #f8fdf6, #eef8ed);
+  }
+  
+  .card-img-top {
+    border-radius: 0;
+    object-fit: cover;
+    height: 20rem;
+    width: 25rem;
+    border-radius: 8px;
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+  }
+  
+  .card-text {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+  }
+  
+  .btn-primary {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .cont-header{
+    text-align: center;
+    margin-top: 15px;
   }
 
 /* WHO WE ARE CSS */
@@ -96,6 +148,7 @@ body, h1, h2, p, ul, li {
     background: #ffffff; 
     color: #000; /* Text color */
     font-family: Arial, sans-serif;
+    margin-top: -210px;
   }
   
   /* Left Content */
@@ -136,45 +189,43 @@ body, h1, h2, p, ul, li {
     color: #555;
   }
   
-  
-  
   .hero-image img {
     max-width: 100%;
     border-radius: 10px;
   }
 
-/* TRANSPORT OPTION SECTION */
-  
-  .transport-options {
+  /* Guide Section */
+
+  .guide{
+    margin-top: 50px;
+  }
+
+  .guide-header h2{
     text-align: center;
-    padding: 2rem 1rem;
+    font-family: 'Inter',sans-serif;
+    margin-top: 100px;
   }
-  
-  .transport-options h2 {
-    margin-bottom: 1.5rem;
+
+  .guide-header p{
+    text-align: center;
+    margin-top: 10px;
   }
-  
-  .options {
+
+  .guide-content{
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 25px;
   }
-  
-  .option img {
-    max-width: 100px;
-    border-radius: 10px;
-  }
-  
-  .option p {
-    margin-top: 0.5rem;
-    font-size: 1rem;
-  }
-  
+
+  /* FOOTER */
   
   footer {
     text-align: center;
     padding: 1rem;
     background: #222;
     color: #fff;
+    margin-top: 25px;
   }
   
