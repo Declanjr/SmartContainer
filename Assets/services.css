@@ -326,3 +326,77 @@ header {
     font-size: 16px;
     cursor: pointer;
   }
+
+  /* Responsive Design */
+
+@media (max-width: 480px) {
+    header.navbar {
+        padding: 10px;
+    }
+
+    header.navbar .contact-button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    .Hero {
+        margin: 10px;
+    }
+
+    .Benefits h4 {
+        font-size: 1.2rem;
+    }
+
+    .benefit-item {
+        max-width: 200px;
+    }
+
+    .faq {
+        margin: 20px;
+    }
+
+    .footer{
+      max-width: 500px;
+    }
+}
+
+@media (max-width: 992px) {
+  .Hero {
+      flex-direction: row;
+      flex-wrap: wrap;
+  }
+
+  .hero-content {
+      flex: 1 1 calc(50% - 40px); /* Two cards per row */
+  }
+
+  .card-title {
+      font-size: 18px;
+  }
+
+  .card-text {
+      font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+      flex: 1 1 calc(100% - 40px); /* One card per row */
+  }
+
+  .card {
+      padding: 20px;
+  }
+
+  .icon {
+      font-size: 30px;
+  }
+
+  .card-title {
+      font-size: 16px;
+  }
+
+  .card-text {
+      font-size: 12px;
+  }
+}
